@@ -25,7 +25,7 @@
 
 <img class="beer" id="blah" src="#" alt="your image" style="display:none" />
 <h3 class="resultTitle" style="display: none">Your result:</h3>
-<b class="resultText" style="display: none">  </b>
+<b class="resultText" id="resultText" style="display: none">  </b>
 
 
 <script>
@@ -90,11 +90,50 @@
         var daytime = "evening";
 
     }
+    console.log(daytime)
 
-    console.log(daytime);
+    var inputwhatever = "beer";
+
+    if(inputwhatever == "beer"){
+        if(daytime == "morning") {
+            var randomAnswer = beer.morning;
+        }
+        if(daytime == "midday") {
+            var randomAnswer = beer.lunchtime;
+        }
+        if(daytime == "evening") {
+            var randomAnswer = beer.evening[Math.floor(Math.random() * beer.evening.length)];
+        }
+    }
+    if(inputwhatever == "wine"){
+        if(daytime == "morning") {
+            var randomAnswer = wine.morning;
+        }
+        if(daytime == "midday") {
+            var randomAnswer = wine.lunchtime;
+        }
+        if(daytime == "evening") {
+            var randomAnswer = wine.evening[Math.floor(Math.random() * wine.evening.length)];
+        }
+    }
+    if(inputwhatever == "tequila"){
+        var randomAnswer = tequila.questionTequila;
+        var questionTequlia = "";
+        var answerTequila = "";
+        if(questionTequlia =="Yes"){
+            answerTequila = tequila.sea
+        }
+        if(questionTequlia == "No"){
+            answerTequila = tequila.noSea
+        }
+    }
+    console.log(randomAnswer)
 
 
-    //   var obj = JSON.parse()
+
+    var paragraph = document.getElementById("resultText");
+    paragraph.textContent += "This just got added";
+
 
 
 </script>
