@@ -70,6 +70,29 @@
         'noSea': 'Orange und Zimt'
     };
 
+    var today = new Date();
+    var time = today.getHours();
+    var daytime = " "
+
+    console.log(time);
+    //zwischen 06 und 12 -> morgens
+    if(time > 6 & time <= 12){
+        var daytime = "morning";
+    }
+
+    //zwischen 12 und 17 -> mittags
+    if(time > 12 & time < 17){
+        var daytime = "midday";
+    }
+
+    //zwischen 17 und 06 -> abends
+    if(time > 17 & time < 6 ){
+        var daytime = "evening";
+
+    }
+
+    console.log(daytime);
+
 
     //   var obj = JSON.parse()
 
