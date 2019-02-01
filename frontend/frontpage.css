@@ -39,3 +39,18 @@ img{
 input[type=file]{
     padding: 10px;
 }
+
+.beer{
+    padding: 190px;
+    transform: rotate(90deg);
+}
+
+.resultTitle{
+    font-size: smaller;
+    text-align: center;
+}
+
+.resultText{
+    font-size: smaller;
+    text-align: center;
+}
