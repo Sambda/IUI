@@ -6,6 +6,7 @@ body {
     border: 3px solid #ff00f7;
     padding: 10px;
 
+
 }
 h2 {
     color: #ffffff;
@@ -61,4 +62,31 @@ input[type=file]{
     font-size: smaller;
     text-align: center;
     font-size: 16px;
+}
+
+.beerSkizze{
+    transform: rotate(-20deg);
+    margin: -80px;
+    margin-top: -50px;
+    margin-left: 60px;
+    display: block;
+}
+
+.tequilaSkizze{
+    transform: rotate(12deg);
+    margin-bottom: -100px;
+    padding-right: 50px;
+    margin-top: -70px;
+    float: right;
+
+}
+
+.wineSkizze{
+    transform: rotate(8deg);
+    margin-top: -25px;
+    display: block;
+    margin-bottom: -120px;
+    padding-right: 50px;
+    float: left;
+    display: block;
 }

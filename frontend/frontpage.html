@@ -11,7 +11,10 @@
 <body >
 <h2>Boozn</h2>
 <p>Find out what you can combine your drink with!</p>
-<p>Choose a picture of your beverage:</p>
+<img class="beerSkizze" id="bierSkizze" src="bierSkizze.png" alt="your image" style="display:block" width="10%" />
+<img class="tequilaSkizze" id="tequilaSkizze" src="tequilaSkizze.png" alt="your image" style="display:block" width="11%" />
+<img class="wineSkizze" id="wineSkizze" src="wineSkizze.png" alt="your image" style="display:block" width="8%" />
+<p style="padding-right: 110px">Choose a picture of your beverage:</p>
 
 
 <!-- hide input container -->
@@ -86,13 +89,13 @@
     }
 
     //zwischen 17 und 06 -> abends
-    if(time > 17 & time < 6 ){
+    if(time > 17 || time < 6 ){
          daytime = "evening";
 
     }
     console.log(daytime)
 
-    var inputwhatever = "wine";
+    var inputwhatever = "beer";
 
     if(inputwhatever == "beer"){
         if(daytime == "morning") {
