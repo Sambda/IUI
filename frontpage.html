@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="frontpage.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <title>Boozn</title>
 </head>
@@ -16,12 +16,17 @@
 
     <!-- hide input container -->
     <div style="height:0px;overflow:hidden">
-        <input type="file" id="fileInput" name="fileInput" />
+        <input type='file' id="fileInput" name="fileInput" onchange="readURL(this);" />
     </div>
     <button type="button" onclick="chooseFile();">Upload Picture</button>
 
-    <input type='file' onchange="readURL(this);" />
+
+
+
     <img id="blah" src="#" alt="your image" />
+
+
+
     <script>
         function chooseFile() {
             document.getElementById("fileInput").click();
@@ -33,9 +38,7 @@
 
                 reader.onload = function (e) {
                     $('#blah')
-                        .attr('src', e.target.result),
-                        .width(150),
-                        .height(200);
+                        .attr('src', e.target.result);
                 };
 
                 reader.readAsDataURL(input.files[0]);
