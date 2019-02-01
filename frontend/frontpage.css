@@ -3,14 +3,14 @@ body {
     font-family: Verdana;
     margin: auto;
     width: 50%;
-    border: 3px solid #970391;
+    border: 3px solid #ff00f7;
     padding: 10px;
-
 
 }
 h2 {
-    color: #ff00e6;
+    color: #ffffff;
     text-align: center;
+    background-color: #ff00e6;
 }
 p {
     color: #656769;
@@ -19,7 +19,7 @@ p {
 }
 
 button {
-    background-color: #ff00e6;
+    background-color: #ff00f7;
     width:40%;
     margin-left: 30%;
     margin-right: 30%;
@@ -50,11 +50,15 @@ input[type=file]{
 }
 
 .resultTitle{
+    color: #656769;
     font-size: smaller;
     text-align: center;
+    font-size: 16px;
 }
 
 .resultText{
+    color: #656769;
     font-size: smaller;
     text-align: center;
+    font-size: 16px;
 }
