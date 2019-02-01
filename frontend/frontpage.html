@@ -23,7 +23,7 @@
 
 
 
-    <img id="blah" src="#" alt="your image" />
+    <img id="blah" src="#" alt="your image" style="display:none" />
 
 
 
@@ -38,7 +38,9 @@
 
                 reader.onload = function (e) {
                     $('#blah')
-                        .attr('src', e.target.result);
+                        .attr('src', e.target.result)
+                        .css('display', 'block');
+
                 };
 
                 reader.readAsDataURL(input.files[0]);
