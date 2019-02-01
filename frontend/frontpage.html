@@ -4,25 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="frontpage.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-
-    <title>Smoothn</title>
+    <title>Boozn</title>
 </head>
-<body>
+<body >
     <h2>Boozn</h2>
     <p>Find out what you can combine your drink with!</p>
     <p>Choose a picture of your beverage:</p>
 
+
     <!-- hide input container -->
     <div style="height:0px;overflow:hidden">
-        <input type="file" id="fileInput" name="fileInput" />
+        <input type='file' id="fileInput" name="fileInput" onchange="readURL(this);" />
     </div>
     <button type="button" onclick="chooseFile();">Upload Picture</button>
+
+
+
+
+    <img id="blah" src="#" alt="your image" />
+
+
 
     <script>
         function chooseFile() {
             document.getElementById("fileInput").click();
         }
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+    </script>
+
+
+    <script>
+        var beer = {
+            'morning': 'Weißbier',
+            'lunchtime': 'Radler',
+            'evening': ['Beer Pong', 'Slap Cup', '12 Maß']
+        };
+
+        var wine = {
+            'morning': 'https://www.caritas.de/hilfeundberatung/onlineberatung/suchtberatung/suchtberatung',
+            'lunchtime': 'Weinschorle',
+            'evening': ['Wein mit Crackern', 'Wein mit Oliven', 'mehr Wein']
+        };
+
+        var tequila = {
+            'questionTequila': 'Bist du gerade am Meer?',
+            'sea': 'Zitrone und Salz',
+            'noSea': 'Orange und Zimt'
+        };
+
+
+     //   var obj = JSON.parse()
+
+
     </script>
 
 </body>
