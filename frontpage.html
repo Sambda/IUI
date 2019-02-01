@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="frontpage.css">
+
 
     <title>Smoothn</title>
 </head>
 <body>
-    <h2>Smoothn</h2>
+    <h2>Boozn</h2>
     <p>Find out what you can combine your drink with!</p>
+    <p>Choose a picture of your beverage:</p>
+
+    <!-- hide input container -->
+    <div style="height:0px;overflow:hidden">
+        <input type="file" id="fileInput" name="fileInput" />
+    </div>
+    <button type="button" onclick="chooseFile();">Upload Picture</button>
+
+    <script>
+        function chooseFile() {
+            document.getElementById("fileInput").click();
+        }
+    </script>
+
 </body>
 </html>
